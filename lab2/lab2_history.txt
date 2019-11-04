@@ -1,0 +1,42 @@
+997  mkdir test
+  998  cd test
+  999  touch file
+ 1000  ls -l
+ 1001  chmod ugo file
+ 1002  chmod 0 file
+ 1003  ls -l
+ 1004  echo "simple try" > file
+ 1005  less file
+ 1006  hilstory
+ 1007  history
+ 1008  chmod 110100000 file
+ 1009  chmod u+rw file
+ 1010  chmod 0110100000 file
+ 1011  chmod 640 file
+ 1012  ls -l
+ 1013  less file
+ 1014  echo "simple try" > file
+ 1015  less file
+ 1016  mkdir dir
+ 1017  cd dir
+ 1018  touch new_file
+ 1019  echo "file 2" > new_file
+ 1020  less new_file
+ 1021  cd ..
+ 1022  chmod 666 dir
+ 1023  less /dir/new_file
+ 1024  cd dir
+ 1025  cd /dir
+ 1026  cd dir
+ 1027  less dir/new_file
+ 1028  chown root life
+ 1029  chown root file
+ 1030  umask 000
+ 1031  touch file2
+ 1032  ls -l
+ 1033  less file
+ 1034  ls -lR
+ 1035  touch lab2_ls-lR.txt
+ 1036  ls -lR > lab2_ls-lR.txt
+ 1037  history > lab2_history.txt
+ 
