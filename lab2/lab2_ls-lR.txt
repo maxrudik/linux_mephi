@@ -1,0 +1,11 @@
+.:
+total 28
+drw-rw-rw-. 2 max  max    22 Nov  3 07:28 dir
+-r--r--r--. 1 root max    11 Nov  3 07:27 file
+-rw-rw-rw-. 1 max  max     0 Nov  3 07:46 file2
+-rw-rw-rw-. 1 max  max     0 Nov  4 02:10 lab2_ls-lR.txt
+-rw-rw-rw-. 1 max  max 23711 Nov  3 08:05 lab2.txt
+ 
+./dir:
+total 0
+-????????? ? ? ? ?            ? new_file
