@@ -1,0 +1,404 @@
+    1  q
+    2  exit
+    3  trap 'o my god; sleep 2' EXIT
+    4  trap -p EXIT
+    5  ps -e
+    6  ps -ef | less
+    7  ps -eF | less
+    8  ps -ely | less
+    9  ps ax
+   10  ps axu
+   11  ps -ejH | less
+   12  ps axjf | less
+   13  ps -eLf | less
+   14  ps axms | less
+   15  ps -eo euser, reser, suser, f, comm, label | less
+   16  ps -eo euser
+   17  ps -eo ruser | less
+   18  ps -eo suser | less
+   19  ps -eo f | less
+   20  ps -eo comm | less
+   21  ps ax
+   22  ps axZ | less
+   23  ps -eM | less
+   24  ps -U root -u root u | less
+   25  ps -eo pid | less
+   26  ps -C systemd -o pid= | less
+   27  ps -q 2 -o comm= 
+   28  ( while true; do printg "AAA %d " $$ >> ~/test.out; sleep 1;
+   29  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done )
+   30  jobs | less
+   31  ps j | less
+   32  jobs | less
+   33  ps j | less
+   34  jobs | less
+   35  ps j | less
+   36  bg | less
+   37  jobs | less
+   38  bg
+   39  jobs | less
+   40  kill %1
+   41  jobs
+   42  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done ) &
+   43  jobs | less
+   44  fg %1
+   45  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done ) &
+   46  jobs | less
+   47  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done ) &
+   48  jobs
+   49  kill -SIGSTOP %1
+   50  jobs
+   51  kill -SIGTERM 
+   52  kill -SIGTERM %2
+   53  jobs
+   54  fg
+   55  sh
+   56  cat test-trap.sh
+   57  touch ~/test-trap.sh
+   58  vim ~/test-trap.sh
+   59  chmod +x test-trap.sh
+   60  test-trap.sh
+   61  ./test-trap.sh
+   62  ls
+   63  vim ~/test-trap.sh
+   64  ls
+   65  cat ./test-trap.sh
+   66  ./test-trap.sh
+   67  touch test-trap.sh
+   68  vim test-trap.sh
+   69  ll ./test-trap.sh
+   70  ./test-trap.sh
+   71  vim test-trap.sh
+   72  ./test-trap.sh
+   73  vim test-trap.sh
+   74  ./test-trap.sh
+   75  vim test-trap.sh
+   76  ./test-trap.sh
+   77  cat /proc/version | less
+   78  uname -a
+   79  cat /proc/meminfo | less
+   80  free | less
+   81  cat /sys/devices | less
+   82  cat /system/node/node0/meminfo | less
+   83  cat /sys/devices/system/node/node0/meminfo | less
+   84  echo $$
+   85  ls -l /proc/self
+   86  ls -l /proc/$$
+   87  ls -ld /proc/$$ | less
+   88  echo $$ | less
+   89  echo $$
+   90  read pid tcomm state other < /proc/$$/stat | less
+   91  ls -l /dev/std* | less
+   92  ls -l ~ | less
+   93  ls -l /dev/std* | less
+   94  ls -l /proc/self/fd | less
+   95  ( cat | head ) > test.out 2> test.err
+   96  ps -e
+   97  ps -ef | less
+   98  ps -eF | less
+   99  ps -ely | less
+  100  ps ax
+  101  ps axu
+  102  ps -ejH | less
+  103  ps axjf | less
+  104  ps -eLf | less
+  105  ps axms | less
+  106  ps -eo euser, reser, suser, f, comm, label | less
+  107  ps -eo euser
+  108  ps -eo ruser | less
+  109  ps -eo suser | less
+  110  ps -eo f | less
+  111  ps -eo comm | less
+  112  ps ax
+  113  ps axZ | less
+  114  ps -eM | less
+  115  ps -U root -u root u | less
+  116  ps -eo pid | less
+  117  ps -C systemd -o pid= | less
+  118  ps -q 2 -o comm= 
+  119  ( while true; do printg "AAA %d " $$ >> ~/test.out; sleep 1;
+  120  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done )
+  121  jobs | less
+  122  ps j | less
+  123  jobs | less
+  124  ps j | less
+  125  jobs | less
+  126  ps j | less
+  127  bg | less
+  128  jobs | less
+  129  bg
+  130  jobs | less
+  131  kill %1
+  132  jobs
+  133  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done ) &
+  134  jobs | less
+  135  fg %1
+  136  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done ) &
+  137  jobs | less
+  138  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done ) &
+  139  jobs
+  140  kill -SIGSTOP %1
+  141  jobs
+  142  kill -SIGTERM 
+  143  kill -SIGTERM %2
+  144  jobs
+  145  fg
+  146  sh
+  147  cat test-trap.sh
+  148  touch ~/test-trap.sh
+  149  vim ~/test-trap.sh
+  150  chmod +x test-trap.sh
+  151  test-trap.sh
+  152  ./test-trap.sh
+  153  ls
+  154  vim ~/test-trap.sh
+  155  ls
+  156  cat ./test-trap.sh
+  157  ./test-trap.sh
+  158  touch test-trap.sh
+  159  vim test-trap.sh
+  160  ll ./test-trap.sh
+  161  ./test-trap.sh
+  162  vim test-trap.sh
+  163  ./test-trap.sh
+  164  vim test-trap.sh
+  165  ./test-trap.sh
+  166  vim test-trap.sh
+  167  ./test-trap.sh
+  168  cat /proc/version | less
+  169  uname -a
+  170  cat /proc/meminfo | less
+  171  free | less
+  172  cat /sys/devices | less
+  173  cat /system/node/node0/meminfo | less
+  174  cat /sys/devices/system/node/node0/meminfo | less
+  175  echo $$
+  176  ls -l /proc/self
+  177  ls -l /proc/$$
+  178  ls -ld /proc/$$ | less
+  179  echo $$ | less
+  180  echo $$
+  181  read pid tcomm state other < /proc/$$/stat | less
+  182  ls -l /dev/std* | less
+  183  ls -l ~ | less
+  184  ls -l /dev/std* | less
+  185  ls -l /proc/self/fd | less
+  186  ( cat | head ) > test.out 2> test.err
+  187  jobs
+  188  touch /fifo1
+  189  mkfifo ~/fifo1
+  190  cat > ~/fifo1
+  191  ps -j
+  192  ( cat | head ) > ~/test.out 2> ~/test.err
+  193  ps -j
+  194  ps j | less
+  195  ps j
+  196  kill 24284 24285
+  197  ps j
+  198  exec ps -l
+  199  sh
+  200  exec ps -l
+  201  ps -l
+  202  sh
+  203  exec ps -l
+  204  ps -e
+  205  ps -ef | less
+  206  ps -eF | less
+  207  ps -ely | less
+  208  ps ax
+  209  ps axu
+  210  ps -ejH | less
+  211  ps axjf | less
+  212  ps -eLf | less
+  213  ps axms | less
+  214  ps -eo euser, reser, suser, f, comm, label | less
+  215  ps -eo euser
+  216  ps -eo ruser | less
+  217  ps -eo suser | less
+  218  ps -eo f | less
+  219  ps -eo comm | less
+  220  ps ax
+  221  ps axZ | less
+  222  ps -eM | less
+  223  ps -U root -u root u | less
+  224  ps -eo pid | less
+  225  ps -C systemd -o pid= | less
+  226  ps -q 2 -o comm= 
+  227  ( while true; do printg "AAA %d " $$ >> ~/test.out; sleep 1;
+  228  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done )
+  229  jobs | less
+  230  ps j | less
+  231  jobs | less
+  232  ps j | less
+  233  jobs | less
+  234  ps j | less
+  235  bg | less
+  236  jobs | less
+  237  bg
+  238  jobs | less
+  239  kill %1
+  240  jobs
+  241  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done ) &
+  242  jobs | less
+  243  fg %1
+  244  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done ) &
+  245  jobs | less
+  246  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done ) &
+  247  jobs
+  248  kill -SIGSTOP %1
+  249  jobs
+  250  kill -SIGTERM 
+  251  kill -SIGTERM %2
+  252  jobs
+  253  fg
+  254  sh
+  255  cat test-trap.sh
+  256  touch ~/test-trap.sh
+  257  vim ~/test-trap.sh
+  258  chmod +x test-trap.sh
+  259  test-trap.sh
+  260  ./test-trap.sh
+  261  ls
+  262  vim ~/test-trap.sh
+  263  ls
+  264  cat ./test-trap.sh
+  265  ./test-trap.sh
+  266  touch test-trap.sh
+  267  vim test-trap.sh
+  268  ll ./test-trap.sh
+  269  ./test-trap.sh
+  270  vim test-trap.sh
+  271  ./test-trap.sh
+  272  vim test-trap.sh
+  273  ./test-trap.sh
+  274  vim test-trap.sh
+  275  ./test-trap.sh
+  276  cat /proc/version | less
+  277  uname -a
+  278  cat /proc/meminfo | less
+  279  free | less
+  280  cat /sys/devices | less
+  281  cat /system/node/node0/meminfo | less
+  282  cat /sys/devices/system/node/node0/meminfo | less
+  283  echo $$
+  284  ls -l /proc/self
+  285  ls -l /proc/$$
+  286  ls -ld /proc/$$ | less
+  287  echo $$ | less
+  288  echo $$
+  289  read pid tcomm state other < /proc/$$/stat | less
+  290  ls -l /dev/std* | less
+  291  ls -l ~ | less
+  292  ls -l /dev/std* | less
+  293  ls -l /proc/self/fd | less
+  294  ( cat | head ) > test.out 2> test.err
+  295  jobs
+  296  touch /fifo1
+  297  mkfifo ~/fifo1
+  298  cat > ~/fifo1
+  299  ps -j
+  300  ( cat | head ) > ~/test.out 2> ~/test.err
+  301  cat < ~/fifo1
+  302  1
+  303  sh
+  304  exec ps -l
+  305  cat ~/test.out | less
+  306  tail -f ~/test.out | less
+  307  tail -f ~/test.out
+  308  touch test.out
+  309  touch test.err
+  310  ps j
+  311  ls -l /proc/23213/fd | less
+  312  ls -l /proc/23214/fd | less
+  313  cat test.out | less
+  314  cat < ~/fifo1 | less
+  315  ps j
+  316  kill 23522
+  317  ps j
+  318  ps -j
+  319  ps j
+  320  ls /proc/23967/fd | less
+  321  ls -l /proc/23967/fd | less
+  322  ls -l /proc/23968/fd | less
+  323  kill 23967
+  324  kill 23968
+  325  ps j
+  326  mkfifo ~/fifo1
+  327  cat
+  328  cat > ~/fifo1
+  329  history | less
+  330  ls
+  331  cd ./Documents/ossMEPHI/lab5
+  332  touch hist
+  333  history > hist
+  334  cat hist | less
+  335  exec
+  336  power off
+  337  history | less
+  338  sh
+  339  ps -l
+  340  exec 3> ~/test.out
+  341  ls -l /proc/$$/fd
+  342  echo Test
+  343  echo Test3 >&3
+  344  cat ~/test.out
+  345  echo Test333 >&3
+  346  cat ~/test.out
+  347  echo && 3203
+  348  echo && 14648
+  349  exec 4< ~/test.out
+  350  ls -l /proc/$$/fd
+  351  cat ~/test.out
+  352  cat <&4
+  353  cat ~/test.out
+  354  cat <&4
+  355  echo Test4 >&3
+  356  cat ~/test.out
+  357  cat <&4
+  358  rm ~/test.out
+  359  ls -l /proc/$$/fd
+  360  cat ~/test.out
+  361  ps axo euid | less
+  362  ps axo pid euid ruid | less
+  363  ps axo pid, euid | less
+  364  ps axo pid,euid | less
+  365  ps axo pid,euid,ruid | less
+  366  touch ~/lab5.sh
+  367  vim ~/lab5.sh
+  368  chmod +x ~/lab5.sh
+  369  ~/lab5.sh wq er
+  370  vim ~/lab5.sh
+  371  ~/lab5.sh wq er
+  372  ls | less
+  373  ps | less
+  374  ps | cut -t1,2 | less
+  375  ps | cut -f 1,2 | less
+  376  ps | cut -f1,2 | less
+  377  ps | cut -f 1,2 | less
+  378  ps | cut -f 1 | less
+  379  ps | less
+  380  ps | tr -s | less
+  381  ps | tr -s ' ' | less
+  382  ps | tr -s ' ' | cut -d' ' -f1,2 | less
+  383  ps | tr -s ' ' | less
+  384  ps | tr -s ' ' | cut -d' ' -f1,2 | less
+  385* ps | tr -s ' '
+  386  ps | tr -s ' ' | cut -d' ' -f1,2 | xargs -l ~/lab5.sh
+  387  vim ~/lab5.sh
+  388  ps axo ruid | less
+  389  vim ~/lab5.sh
+  390  ps axo ruid,euid,cmd | less
+  391  ps axo ruid,euid,cmd | xargs -l ~/lab5.sh
+  392  ps axo ruid,euid,cmd | xargs -l ~/lab5.sh | less
+  393  vim ~/lab5.sh
+  394  ps axo ruid,euid,cmd | xargs -l ~/lab5.sh | less
+  395  vim ~/lab5.sh
+  396  ps axo ruid,euid,cmd | xargs -l ~/lab5.sh | less
+  397  vim ~/lab5.sh
+  398  ps axo ruid,euid,cmd | xargs -l ~/lab5.sh | less
+  399  passwd | less
+  400  cd ./Documents/ossMEPHI/
+  401  ls
+  402  cd lab5
+  403  ls
+  404  history > hist
